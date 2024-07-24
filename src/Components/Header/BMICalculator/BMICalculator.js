@@ -1,6 +1,8 @@
 import React from 'react';
 import SelectUnit from './SelectUnit';
 import EnterHeight from './EnterHeight';
+import EnterWeight from './EnterWeight';
+import Results from './Results';
 import * as styles from './styles.module.css';
 
 function BMICalculator() {
@@ -10,7 +12,11 @@ function BMICalculator() {
                 Enter your details below
             </h1>
             <SelectUnit/>
-            <EnterHeight/>
+            <div className={styles.inputs}>
+                <EnterHeight/>
+                <EnterWeight/>                
+            </div>
+            <Results/>
         </section>
     )
 }
