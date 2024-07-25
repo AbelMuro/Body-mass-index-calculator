@@ -1,5 +1,5 @@
 .container{
-    width: 500px;
+    width: 100%;
     border-radius: 16px 999px 999px 16px;
     padding: 32px;
     background-color: var(--Blue, #345FF6);
@@ -81,4 +81,31 @@
 
 .idealWeight{
     font-weight: 700;
+}
+
+@media(max-width: 550px){
+    .container{
+        border-radius: 16px;
+    }
+
+    .results{
+        grid-template-columns: 1fr;
+    }
+
+    .results > h1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .results > strong{
+        font-size: 3rem;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-bottom: 16px;
+    }
+
+    .results > p{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
 }

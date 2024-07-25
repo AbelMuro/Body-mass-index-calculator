@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import * as styles from './styles.module.css';
 
-function EnterWeight() {
+function EnterMetricWeight() {
     const [weight, setWeight] = useState('');
     const dispatch = useDispatch();
 
@@ -31,4 +31,4 @@ function EnterWeight() {
     )
 }
 
-export default EnterWeight;
+export default EnterMetricWeight;

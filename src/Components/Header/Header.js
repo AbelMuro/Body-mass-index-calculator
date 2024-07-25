@@ -4,9 +4,6 @@ import icons from './icons';
 import * as styles from './styles.module.css';
 
 function Header() {
-    
-
-
     return(
         <header className={styles.header}>
             <section className={styles.header_blueBox}>

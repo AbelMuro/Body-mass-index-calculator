@@ -2,10 +2,7 @@ import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import * as styles from './styles.module.css';
 
-//this is where i left off, i will need to make sure that the user only inputs numbers
-// and i need to dispatch the action to the reducer
-// also dont forget to make this into a PWA
-function EnterHeight() {
+function EnterMetricHeight() {
     const [height, setHeight] = useState('');
     const dispatch = useDispatch();
 
@@ -34,4 +31,4 @@ function EnterHeight() {
     )
 }
 
-export default EnterHeight
+export default EnterMetricHeight

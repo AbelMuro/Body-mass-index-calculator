@@ -6,6 +6,7 @@
     padding: 0px;
     border: none;
     margin: 0px;
+    transition: all 0.2s linear, gap 0s;
 }
 
 .container > div{
@@ -47,4 +48,26 @@
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 24px */
+}
+
+@media(max-width: 1010px){
+    .container{
+        gap: 0px;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 880px){
+    .container{
+        gap: 224px;
+        justify-content: start;
+        transition: all 0.2s linear, gap 0.2s linear;
+    }
+}
+
+@media(max-width: 550px){
+    .container{
+        justify-content: start;
+        gap: 53px;
+    }
 }
