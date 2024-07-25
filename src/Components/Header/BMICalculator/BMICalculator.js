@@ -8,6 +8,8 @@ import Results from './Results';
 import {useSelector} from 'react-redux';
 import * as styles from './styles.module.css';
 
+// i will need to implement the inputs for the imperial units option
+
 function BMICalculator() {
     const unit = useSelector(state => state.unit);
 
