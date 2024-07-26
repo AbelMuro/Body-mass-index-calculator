@@ -14,7 +14,7 @@ function EnterImperialWeight() {
     const handleStones = (e) => {
         const input = e.target.value;
 
-        if(validateInput(input)) 
+        if(validateInput(input) || Number(input) > 10000) 
             return;
         setStones(input);
     }

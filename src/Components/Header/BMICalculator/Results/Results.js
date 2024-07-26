@@ -25,7 +25,6 @@ function Results() {
         if(!weight || !height) return;
 
         const result = Number(weight)/(Number(height)**2) * 10000;
-        console.log(result)
         if(result > 100){
             alert('Height and weight are too large, please enter smaller numbers');
             setResults('');
@@ -41,6 +40,7 @@ function Results() {
     useEffect(() => {
         setResults('');
         setIdealWeight('');
+        dispatch({type: 'CLEAR'});
     }, [unit])
 
     return (

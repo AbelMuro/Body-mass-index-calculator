@@ -12,6 +12,9 @@ function EnterMetricHeight() {
         if(!input.match(/^[0-9]+\.$/) && !input.match(/^[0-9]+.[0-9]+$/) && !input.match(/^[0-9]+$/) && input.length) 
             return;
 
+        if(Number(input) > 10000)
+            return;
+
         setHeight(input);
     }
     
