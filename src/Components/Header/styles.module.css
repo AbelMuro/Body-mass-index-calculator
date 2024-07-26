@@ -2,6 +2,7 @@
     width: 1276px;
     margin: auto;
     position: relative;
+    margin-bottom: 65px;
 }
 
 .header_blueBox{
@@ -76,6 +77,7 @@
 @media(max-width: 880px){
     .header{
         width: 100%;
+        margin-bottom: 96px;
     }
 
     .header_blueBox{
@@ -112,6 +114,10 @@
 
 /* mobile */
 @media(max-width: 550px){
+    .header{
+        margin-bottom: 72px;
+    }
+
     .header_blueBox{
         height: 640px;
     }

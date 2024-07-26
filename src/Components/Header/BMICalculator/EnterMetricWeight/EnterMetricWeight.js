@@ -11,6 +11,7 @@ function EnterMetricWeight() {
 
         if(!input.match(/^[0-9]+\.$/) && !input.match(/^[0-9]+.[0-9]+$/) && !input.match(/^[0-9]+$/) && input.length) 
             return;
+        
         setWeight(input);
     }
 
