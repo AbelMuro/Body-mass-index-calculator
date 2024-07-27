@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {displayVariant} from './Variants';
 import { useDispatch } from 'react-redux';
 import * as styles from './styles.module.css';
 
@@ -27,10 +29,30 @@ function EnterMetricHeight() {
             <label htmlFor='height'>
                 Height
             </label>
-            <input type='text' className={styles.input} value={height} onChange={handleHeight} onBlur={handleBlur}/>
-            <p>
+            <motion.input 
+                variants={displayVariant}
+                initial='hide'
+                animate='show' 
+                transition={{
+                    duration: 0.4
+                }}
+                type='text' 
+                className={styles.input} 
+                value={height} 
+                onChange={handleHeight} 
+                onBlur={handleBlur}
+                
+                />
+            <motion.p
+                variants={displayVariant}
+                initial='hide'
+                animate='show' 
+                transition={{
+                    delay: 0.4
+                }}
+            >
                 cm
-            </p>
+            </motion.p>
         </fieldset>
     )
 }

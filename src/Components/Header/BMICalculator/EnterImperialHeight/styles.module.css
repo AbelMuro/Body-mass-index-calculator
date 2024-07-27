@@ -26,6 +26,7 @@
     right: 24px;
     bottom: 22px;
     margin: 0px;
+    transition: all 0.2s linear, transform 0s;
 }
 
 
@@ -53,6 +54,7 @@
     font-weight: 600;
     line-height: normal;
     letter-spacing: -1.2px;
+    transition: all 0.2s linear, transform 0s;
 }
 
 .input:focus{

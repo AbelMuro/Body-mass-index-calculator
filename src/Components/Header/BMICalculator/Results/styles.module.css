@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    border-radius: 16px 999px 999px 16px;
+    border-radius: 16px 100px 100px 16px;
     padding: 32px;
     background-color: var(--Blue, #345FF6);
     display: flex;

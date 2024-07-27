@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {displayVariant} from './Variants';
+import {motion} from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import * as styles from './styles.module.css';
 
@@ -27,10 +29,28 @@ function EnterMetricWeight() {
             <label htmlFor='height'>
                 Weight
             </label>
-            <input type='text' className={styles.input} value={weight} onChange={handleWeight} onBlur={handleBlur}/>
-            <p>
+            <motion.input 
+                variants={displayVariant}
+                initial='hide'
+                animate='show' 
+                transition={{
+                    duration: 0.4
+                }}
+                type='text' 
+                className={styles.input} 
+                value={weight} 
+                onChange={handleWeight} 
+                onBlur={handleBlur}/>
+            <motion.p
+                variants={displayVariant}
+                initial='hide'
+                animate='show' 
+                transition={{
+                    delay: 0.4
+                }}
+            >
                 kg
-            </p>
+            </motion.p>
         </fieldset>
     )
 }

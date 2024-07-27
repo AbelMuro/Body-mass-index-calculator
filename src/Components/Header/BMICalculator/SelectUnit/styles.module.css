@@ -38,6 +38,7 @@
 .radio_checked{
     width: 33px;
     height: 33px;
+    transition: all 0s;
 }
 
 

@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {displayVariant} from './Variants';
 import {useDispatch} from 'react-redux';
 import * as styles from './styles.module.css';
 
@@ -47,16 +49,49 @@ function EnterImperialWeight() {
                 <label htmlFor='height'>
                     Weight
                 </label>
-                <input type='text' className={styles.input} id={styles.st} value={stones} onChange={handleStones} onBlur={handleBlurStones}/>
-                <p>
-                    st
-                </p>
+                <motion.input 
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{
+                        duration: 0.4
+                    }}
+                    type='text' 
+                    className={styles.input} 
+                    id={styles.st} 
+                    value={stones} 
+                    onChange={handleStones} 
+                    onBlur={handleBlurStones}/>
+                <motion.p
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{delay: 0.4}}>
+                        st
+                </motion.p>
             </fieldset>          
             <fieldset className={styles.container}>
-                <input type='text' className={styles.input} id={styles.lbs} value={pounds} onChange={handlePounds} onBlur={handleBlurPounds}/>
-                <p>
+                <motion.input 
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{
+                        duration: 0.4
+                    }}
+                    type='text' 
+                    className={styles.input} 
+                    id={styles.lbs} 
+                    value={pounds} 
+                    onChange={handlePounds} 
+                    onBlur={handleBlurPounds}/>
+                <motion.p
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{delay: 0.4}}
+                >
                     lbs
-                </p>
+                </motion.p>
             </fieldset>          
         </div>
    

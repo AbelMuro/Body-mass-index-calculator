@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import {motion} from 'framer-motion';
 import {useDispatch} from 'react-redux';
 import * as styles from './styles.module.css';
+import {displayVariant} from './Variants';
 
 function EnterImperialHeight() {
     const [feet, setFeet] = useState('');
@@ -45,16 +47,46 @@ function EnterImperialHeight() {
                 <label htmlFor='height'>
                     Height
                 </label>
-                <input type='text' className={styles.input} value={feet} onChange={handleFeet} onBlur={handleBlurFeet}/>
-                <p>
-                    ft
-                </p>
+                <motion.input 
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{
+                        duration: 0.4
+                    }}
+                    type='text' 
+                    className={styles.input} 
+                    value={feet} 
+                    onChange={handleFeet} 
+                    onBlur={handleBlurFeet}
+                    />
+                <motion.p 
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{delay: 0.4}}
+                    >
+                        ft
+                </motion.p>
             </fieldset>          
             <fieldset className={styles.container}>
-                <input type='text' className={styles.input} value={inches} onChange={handleInches} onBlur={handleBlurInches}/>
-                <p>
-                    in
-                </p>
+                <motion.input 
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{duration: 0.4}}
+                    type='text' 
+                    className={styles.input} 
+                    value={inches} 
+                    onChange={handleInches} 
+                    onBlur={handleBlurInches}/>
+                <motion.p
+                    variants={displayVariant}
+                    initial='hide'
+                    animate='show' 
+                    transition={{delay: 0.4}}>
+                        in
+                </motion.p>
             </fieldset>          
         </div>
    
