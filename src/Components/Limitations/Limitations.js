@@ -1,10 +1,18 @@
 import React from 'react';
+import {motion} from 'framer-motion';
+import { displayVariant } from './Variants';
 import icons from './icons';
 import * as styles from './styles.module.css';
 
 function Limitations() {
     return(
-        <section className={styles.container}>
+        <motion.section 
+            className={styles.container} 
+            initial='hide' 
+            whileInView='show' 
+            viewport={{once: true, amount: 0.4}}
+            transition={{staggerChildren: 0.2}}
+            >
             <img className={styles.curve} src={icons['curve']}/>
             <div className={styles.title}>
                 <h1>
@@ -17,7 +25,7 @@ function Limitations() {
                     the measurement may not be beneficial to use.
                 </p>
             </div>
-            <div className={styles.category} id={styles.gender}>
+            <motion.div className={styles.category} id={styles.gender} variants={displayVariant}>
                 <img src={icons['gender']}/>
                 <h2>
                     Gender
@@ -28,8 +36,8 @@ function Limitations() {
                     a child's age and gender are considered when 
                     evaluating their BMI.
                 </p>
-            </div>
-            <div className={styles.category} id={styles.age}>
+            </motion.div>
+            <motion.div className={styles.category} id={styles.age} variants={displayVariant}>
                 <img src={icons['age']}/>
                 <h2>
                     Age
@@ -39,8 +47,8 @@ function Limitations() {
                     fat and muscle loss may cause BMI to 
                     underestimate body fat content.
                 </p>
-            </div> 
-            <div className={styles.category} id={styles.muscle}>
+            </motion.div> 
+            <motion.div className={styles.category} id={styles.muscle} variants={displayVariant}>
                 <img src={icons['muscle']}/>
                 <h2>
                     Muscle
@@ -50,8 +58,8 @@ function Limitations() {
                     individuals as overweight or obese, 
                     as it doesn't differentiate muscle from fat.
                 </p>
-            </div>
-            <div className={styles.category} id={styles.pregnancy}>
+            </motion.div>
+            <motion.div className={styles.category} id={styles.pregnancy} variants={displayVariant}>
                 <img src={icons['pregnancy']}/>
                 <h2>
                     Pregnancy
@@ -62,8 +70,8 @@ function Limitations() {
                     pre-pregnancy BMI is advisable to minimise 
                     health risks for both mother and child.
                 </p>
-            </div>
-            <div className={styles.category} id={styles.race}>
+            </motion.div>
+            <motion.div className={styles.category} id={styles.race} variants={displayVariant}>
                 <img src={icons['race']}/>
                 <h2>
                     Race
@@ -74,8 +82,8 @@ function Limitations() {
                     than others. To learn more, it is advised to 
                     discuss this with your GP or practice nurse.
                 </p>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     )
 }
 
