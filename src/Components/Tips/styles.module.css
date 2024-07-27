@@ -6,7 +6,7 @@
     justify-content: center;
     gap: 32px;
     border-radius: 35px;
-    background: var(--Gradient-1, linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+    background: var(--Gradient-1, linear-gradient(290deg, rgba(214, 230, 254, 0.25) 0%, rgba(214, 252, 254, 0.00) 100%));
     margin: 0px auto 120px auto;
     list-style-type: none;
 }
