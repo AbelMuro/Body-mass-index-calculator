@@ -9,7 +9,7 @@
     width: 978px;
     height: 737px;
     border-radius: 0px 0px 35px 35px;
-    background: var(--Gradient-1, linear-gradient(290deg, #D6E6FE 0%, rgba(231, 245, 254, 0) 100%));
+    background: var(--Gradient-1, linear-gradient(290deg, #E7F5FE 0%, rgba(214, 252, 254, 0.1) 100%));
     padding: 75px 0px 0px 116px;
 }
 
